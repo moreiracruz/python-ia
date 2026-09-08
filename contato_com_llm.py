@@ -2,9 +2,10 @@
 from openai import OpenAI
 
 client = OpenAI(
-    base_url= 'http://127.0.0.1:1234/v1',
+    base_url='http://127.0.0.1:1234/v1',
     api_key='llm-studio'
 )
+
 
 def recebe_linha_e_retorna_json(linha):
     resposta_do_llm = client.chat.completions.create(
